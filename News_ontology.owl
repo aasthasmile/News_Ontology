@@ -1,0 +1,1574 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.aastha.org/NewsOntology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.aastha.org/NewsOntology">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty IRI="#creator"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Aastha Jain</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;1.0&quot;</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;The News Ontology descibes production of news-Articles and distribution of these article through two modes.First, newspaper (written-mode of communication) and Social-Media (through Internet,Blogs,Social-website).</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Alternative_Headline"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Article"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Audio_Posting"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Author"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Blog_posting"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BuisnessNews_Article"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Content"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Crime_Article"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Critics"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Customer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Description"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Distributor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Economy_Article"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Editor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Education_Article"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#English"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#French"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Headline"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Image_Posting"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Language"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LocalNews_Article"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Media"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MedicalScholarly_Article"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NewsArticle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Organization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Printing_Press"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Publisher"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ScholarlyArticle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SocialMedia_Posting"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SportsNews_Article"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TechnologyScholarly_Article"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Video_Posting"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#articleBody"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#articleConclusion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#articleSection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#contentLocation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#CommentOn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#about"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#distibutes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCommentBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_a"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isCreatedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isDistributedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isModifiedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isPublishedby"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isRatedby"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isRelatedtoArticle"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isRelatedtoMedia"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#mentions"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#print"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#worksFor"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#NumberOfComments"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#date"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasAmountPaid"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasCustomerId"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasPostalAddress"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasStars"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#height"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#isCreatedon"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#isModifiedOn"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#isPublishedOn"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#pageEnd"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#pageStart"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#width"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#wordcount"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#American_Journal_Research_Association"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Andrew_McGivern"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ballard_Printing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Charles_Baudelaire"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#China"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Defense_and_Military_Forces"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Double-Dip_Recession"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Englor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Facebook"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#France"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#George_S.Kaufman"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Google_Bloggs"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Gore_Vidal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Great_Britain"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Great_Collapse"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Harriet_Monroe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#India"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Indian-American_Professor_wins_genius_grant"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Kiliko"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Libya"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Linkedin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Macy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Martin_Lenka"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#New_York"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Nightmare_on_Wall_St_bring_more_big_losses"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Press_Association_Organization"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Quora"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#R.Madhavan"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Recession_Lingers"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Rosy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Shikha"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Soren_Kierkegarrad"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Swiss_Bank_move_could_make_loans_cheaper"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TeeMer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Twitter"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#United_States"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vevo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Virgil_Thomson"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Youtube"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#14Fourteen_Killed_as_Plane_Hit_graveyard"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#creator"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#SocialMedia_Posting"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Linkedin"/>
+            <NamedIndividual IRI="#Quora"/>
+            <NamedIndividual IRI="#Twitter"/>
+            <NamedIndividual IRI="#Facebook"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Video_Posting"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Vevo"/>
+            <NamedIndividual IRI="#Youtube"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#contentLocation"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#India"/>
+            <NamedIndividual IRI="#Libya"/>
+            <NamedIndividual IRI="#Great_Britain"/>
+            <NamedIndividual IRI="#New_York"/>
+            <NamedIndividual IRI="#China"/>
+            <NamedIndividual IRI="#United_States"/>
+            <NamedIndividual IRI="#France"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Alternative_Headline"/>
+        <Class IRI="#Content"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#isCreatedon"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#isModifiedOn"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#isPublishedOn"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#pageEnd"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#pageStart"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Audio_Posting"/>
+        <Class IRI="#Media"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Audio_Posting"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#width"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Author"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Blog_posting"/>
+        <Class IRI="#SocialMedia_Posting"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BuisnessNews_Article"/>
+        <Class IRI="#NewsArticle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Crime_Article"/>
+        <Class IRI="#NewsArticle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Critics"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Critics"/>
+        <DataMaxCardinality cardinality="5">
+            <DataProperty IRI="#hasStars"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Customer"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Customer"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasName"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Customer"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasPostalAddress"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Customer"/>
+        <DataMinCardinality cardinality="0">
+            <DataProperty IRI="#hasAmountPaid"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Customer"/>
+        <DataExactCardinality cardinality="6">
+            <DataProperty IRI="#hasCustomerId"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Customer"/>
+        <DataMaxCardinality cardinality="1500">
+            <DataProperty IRI="#hasAmountPaid"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Description"/>
+        <Class IRI="#Content"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Distributor"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Distributor"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasCustomerId"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Distributor"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasPostalAddress"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Economy_Article"/>
+        <Class IRI="#NewsArticle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Editor"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Editor"/>
+        <DataHasValue>
+            <DataProperty IRI="#hasName"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">Charles_Baudelaire</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Education_Article"/>
+        <Class IRI="#NewsArticle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#English"/>
+        <Class IRI="#Language"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#French"/>
+        <Class IRI="#Language"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Headline"/>
+        <Class IRI="#Content"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Image_Posting"/>
+        <Class IRI="#Media"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Language"/>
+        <Class IRI="#Content"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LocalNews_Article"/>
+        <Class IRI="#NewsArticle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Media"/>
+        <Class IRI="#SocialMedia_Posting"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MedicalScholarly_Article"/>
+        <Class IRI="#ScholarlyArticle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewsArticle"/>
+        <Class IRI="#Article"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Organization"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Person"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Printing_Press"/>
+        <Class IRI="#Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Publisher"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ScholarlyArticle"/>
+        <Class IRI="#Article"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SocialMedia_Posting"/>
+        <Class IRI="#Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SportsNews_Article"/>
+        <Class IRI="#NewsArticle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TechnologyScholarly_Article"/>
+        <Class IRI="#ScholarlyArticle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Video_Posting"/>
+        <Class IRI="#Media"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#articleBody"/>
+        <Class IRI="#Description"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#articleBody"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#wordcount"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;integer">100</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#articleBody"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#wordcount"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;maxInclusive">
+                    <Literal datatypeIRI="&xsd;integer">500</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#articleConclusion"/>
+        <Class IRI="#Description"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#articleConclusion"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#wordcount"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;integer">100</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#articleConclusion"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#wordcount"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;maxInclusive">
+                    <Literal datatypeIRI="&xsd;integer">500</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#articleSection"/>
+        <Class IRI="#Description"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#articleSection"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#wordcount"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;integer">500</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#articleSection"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#wordcount"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;maxInclusive">
+                    <Literal datatypeIRI="&xsd;integer">1500</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#contentLocation"/>
+        <Class IRI="#Content"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Alternative_Headline"/>
+        <Class IRI="#Description"/>
+        <Class IRI="#Headline"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Article"/>
+        <Class IRI="#Organization"/>
+        <Class IRI="#Person"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Author"/>
+        <Class IRI="#Critics"/>
+        <Class IRI="#Customer"/>
+        <Class IRI="#Editor"/>
+        <Class IRI="#Publisher"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#MedicalScholarly_Article"/>
+        <Class IRI="#TechnologyScholarly_Article"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#NewsArticle"/>
+        <Class IRI="#ScholarlyArticle"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Printing_Press"/>
+        <Class IRI="#SocialMedia_Posting"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#articleBody"/>
+        <Class IRI="#articleConclusion"/>
+        <Class IRI="#articleSection"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#ScholarlyArticle"/>
+        <NamedIndividual IRI="#American_Journal_Research_Association"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Distributor"/>
+        <NamedIndividual IRI="#Andrew_McGivern"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Printing_Press"/>
+        <NamedIndividual IRI="#Ballard_Printing"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Editor"/>
+        <NamedIndividual IRI="#Charles_Baudelaire"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#contentLocation"/>
+        <NamedIndividual IRI="#China"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Content"/>
+        <NamedIndividual IRI="#Defense_and_Military_Forces"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Economy_Article"/>
+        <NamedIndividual IRI="#Double-Dip_Recession"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Customer"/>
+        <NamedIndividual IRI="#Englor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SocialMedia_Posting"/>
+        <NamedIndividual IRI="#Facebook"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#contentLocation"/>
+        <NamedIndividual IRI="#France"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Critics"/>
+        <NamedIndividual IRI="#George_S.Kaufman"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Blog_posting"/>
+        <NamedIndividual IRI="#Google_Bloggs"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Critics"/>
+        <NamedIndividual IRI="#Gore_Vidal"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#contentLocation"/>
+        <NamedIndividual IRI="#Great_Britain"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Economy_Article"/>
+        <NamedIndividual IRI="#Great_Collapse"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Publisher"/>
+        <NamedIndividual IRI="#Harriet_Monroe"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#contentLocation"/>
+        <NamedIndividual IRI="#India"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Content"/>
+        <NamedIndividual IRI="#Indian-American_Professor_wins_genius_grant"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Distributor"/>
+        <NamedIndividual IRI="#Kiliko"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#contentLocation"/>
+        <NamedIndividual IRI="#Libya"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SocialMedia_Posting"/>
+        <NamedIndividual IRI="#Linkedin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Customer"/>
+        <NamedIndividual IRI="#Macy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Author"/>
+        <NamedIndividual IRI="#Martin_Lenka"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#contentLocation"/>
+        <NamedIndividual IRI="#New_York"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BuisnessNews_Article"/>
+        <NamedIndividual IRI="#Nightmare_on_Wall_St_bring_more_big_losses"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Printing_Press"/>
+        <NamedIndividual IRI="#Press_Association_Organization"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SocialMedia_Posting"/>
+        <NamedIndividual IRI="#Quora"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Author"/>
+        <NamedIndividual IRI="#R.Madhavan"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BuisnessNews_Article"/>
+        <NamedIndividual IRI="#Recession_Lingers"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Customer"/>
+        <NamedIndividual IRI="#Rosy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Customer"/>
+        <NamedIndividual IRI="#Shikha"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Publisher"/>
+        <NamedIndividual IRI="#Soren_Kierkegarrad"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Content"/>
+        <NamedIndividual IRI="#Swiss_Bank_move_could_make_loans_cheaper"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Customer"/>
+        <NamedIndividual IRI="#TeeMer"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SocialMedia_Posting"/>
+        <NamedIndividual IRI="#Twitter"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#contentLocation"/>
+        <NamedIndividual IRI="#United_States"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Video_Posting"/>
+        <NamedIndividual IRI="#Vevo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Editor"/>
+        <NamedIndividual IRI="#Virgil_Thomson"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Video_Posting"/>
+        <NamedIndividual IRI="#Youtube"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Crime_Article"/>
+        <NamedIndividual IRI="#14Fourteen_Killed_as_Plane_Hit_graveyard"/>
+    </ClassAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasCommentBy"/>
+        <ObjectProperty IRI="#CommentOn"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#mentions"/>
+        <ObjectProperty IRI="#about"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#distibutes"/>
+        <ObjectProperty IRI="#isDistributedBy"/>
+    </InverseObjectProperties>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#about"/>
+    </SymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#isCreatedBy"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#isDistributedBy"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#isModifiedBy"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#isPublishedby"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#isRatedby"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#isRelatedtoArticle"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#isRelatedtoMedia"/>
+    </AsymmetricObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#worksFor"/>
+    </TransitiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#CommentOn"/>
+        <Class IRI="#Critics"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#CommentOn"/>
+        <Class IRI="#Customer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#about"/>
+        <Class IRI="#Content"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#distibutes"/>
+        <Class IRI="#Distributor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCommentBy"/>
+        <Class IRI="#Article"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCommentBy"/>
+        <Class IRI="#Blog_posting"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_a"/>
+        <Class IRI="#Article"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isCreatedBy"/>
+        <Class IRI="#Article"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isDistributedBy"/>
+        <Class IRI="#Article"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isModifiedBy"/>
+        <Class IRI="#Article"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isPublishedby"/>
+        <Class IRI="#Article"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isRatedby"/>
+        <Class IRI="#Article"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isRelatedtoArticle"/>
+        <Class IRI="#SocialMedia_Posting"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isRelatedtoMedia"/>
+        <Class IRI="#Article"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#mentions"/>
+        <Class IRI="#Article"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#print"/>
+        <Class IRI="#Printing_Press"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#worksFor"/>
+        <Class IRI="#Author"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#CommentOn"/>
+        <Class IRI="#Article"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#CommentOn"/>
+        <Class IRI="#Blog_posting"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#about"/>
+        <Class IRI="#Article"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#distibutes"/>
+        <Class IRI="#Article"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCommentBy"/>
+        <Class IRI="#Critics"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCommentBy"/>
+        <Class IRI="#Customer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_a"/>
+        <Class IRI="#Alternative_Headline"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_a"/>
+        <Class IRI="#Description"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_a"/>
+        <Class IRI="#Headline"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_a"/>
+        <Class IRI="#Language"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_a"/>
+        <Class IRI="#contentLocation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isCreatedBy"/>
+        <Class IRI="#Author"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isDistributedBy"/>
+        <Class IRI="#Distributor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isModifiedBy"/>
+        <Class IRI="#Editor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isPublishedby"/>
+        <Class IRI="#Publisher"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isRatedby"/>
+        <Class IRI="#Critics"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isRelatedtoArticle"/>
+        <Class IRI="#Article"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isRelatedtoMedia"/>
+        <Class IRI="#SocialMedia_Posting"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#mentions"/>
+        <Class IRI="#Content"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#print"/>
+        <Class IRI="#Article"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#worksFor"/>
+        <Class IRI="#Editor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#worksFor"/>
+        <Class IRI="#Publisher"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#isCreatedon"/>
+        <DataProperty IRI="#date"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#isModifiedOn"/>
+        <DataProperty IRI="#date"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#isPublishedOn"/>
+        <DataProperty IRI="#date"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#NumberOfComments"/>
+        <Class IRI="#Article"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#date"/>
+        <Class IRI="#Article"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasAmountPaid"/>
+        <Class IRI="#Customer"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasCustomerId"/>
+        <Class IRI="#Customer"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasName"/>
+        <Class IRI="#Customer"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasPostalAddress"/>
+        <Class IRI="#Customer"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasStars"/>
+        <Class IRI="#Article"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#height"/>
+        <Class IRI="#Image_Posting"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#isCreatedon"/>
+        <Class IRI="#Article"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#isModifiedOn"/>
+        <Class IRI="#Article"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#isPublishedOn"/>
+        <Class IRI="#Article"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#pageEnd"/>
+        <Class IRI="#Article"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#pageStart"/>
+        <Class IRI="#Article"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#width"/>
+        <Class IRI="#Audio_Posting"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#width"/>
+        <Class IRI="#Image_Posting"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#width"/>
+        <Class IRI="#Media"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#width"/>
+        <Class IRI="#Video_Posting"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#wordcount"/>
+        <Class IRI="#Article"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#NumberOfComments"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#date"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasAmountPaid"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasAmountPaid"/>
+        <DatatypeRestriction>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+            <FacetRestriction facet="&xsd;minInclusive">
+                <Literal datatypeIRI="&xsd;integer">10</Literal>
+            </FacetRestriction>
+        </DatatypeRestriction>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasAmountPaid"/>
+        <DatatypeRestriction>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+            <FacetRestriction facet="&xsd;maxInclusive">
+                <Literal datatypeIRI="&xsd;integer">50</Literal>
+            </FacetRestriction>
+        </DatatypeRestriction>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasCustomerId"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasPostalAddress"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasStars"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#height"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#isCreatedon"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#isModifiedOn"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#isPublishedOn"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#pageEnd"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#pageEnd"/>
+        <DatatypeRestriction>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+            <FacetRestriction facet="&xsd;minInclusive">
+                <Literal datatypeIRI="&xsd;integer">1</Literal>
+            </FacetRestriction>
+        </DatatypeRestriction>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#pageEnd"/>
+        <DatatypeRestriction>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+            <FacetRestriction facet="&xsd;maxInclusive">
+                <Literal datatypeIRI="&xsd;integer">25</Literal>
+            </FacetRestriction>
+        </DatatypeRestriction>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#pageStart"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#pageStart"/>
+        <DatatypeRestriction>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+            <FacetRestriction facet="&xsd;minInclusive">
+                <Literal datatypeIRI="&xsd;integer">1</Literal>
+            </FacetRestriction>
+        </DatatypeRestriction>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#pageStart"/>
+        <DatatypeRestriction>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+            <FacetRestriction facet="&xsd;maxInclusive">
+                <Literal datatypeIRI="&xsd;integer">25</Literal>
+            </FacetRestriction>
+        </DatatypeRestriction>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#width"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#wordcount"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#wordcount"/>
+        <DatatypeRestriction>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+            <FacetRestriction facet="&xsd;minInclusive">
+                <Literal datatypeIRI="&xsd;integer">1</Literal>
+            </FacetRestriction>
+        </DatatypeRestriction>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#wordcount"/>
+        <DatatypeRestriction>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+            <FacetRestriction facet="&xsd;maxInclusive">
+                <Literal datatypeIRI="&xsd;integer">1000</Literal>
+            </FacetRestriction>
+        </DatatypeRestriction>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Article</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot; A article is description about the current news on various topics-such as buisness,education,law,crime,technology,world etc&quot;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Article</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Article</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CommentOn</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;Blogs and articles which are posted online are reviewed by customer as well as critics and present their reviews in form of Comments&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CommentOn</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">CommentOn</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Content</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;An Article has various content related with it - a headline ,a description ,alternativeHeadline , place where news is published,language in which news is printed,the author of the article&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Content</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Content</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Description</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A description for the news article containing -body ,section and conclusion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Distributor</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;The person who distributes the newsaper to customer through customerId and their postal-address&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Media</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;A Work such as an image, video, or audio clips shared as part of this posting&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Media</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Media</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Organization</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;A company which need to print newspaper and social media organizations which provide  audio,image,video content on Internet&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Organization</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Organization</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Person</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;Specify the different person associated with handling tasks such as writing, editing ,publishing ,reviewing and distributing the newspaper&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Person</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Person</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#about</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;The content is relatedto(or about) Article&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#about</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">about</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#articleBody</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;The body section of the article&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#articleBody</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">articleBody</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#articleSection</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;Article has one or more sections dependeing on the type of topic-sports,education,editorial etc&quot;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#articleSection</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">articleSection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#distibutes</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;Distributor distributes the newspaper to customer postal address&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#distibutes</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">distrbutes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasAmountPaid</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;The customer need to pay certain amount to buy newspaper&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasCommentBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;Blogs and articles which are posted online are reviewed by customer as well as critics and present their reviews in form of Comments&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasCustomerId</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;The customer has customer Id through which it can order distributor to deliver newsaper daily at a particular postal address&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasName</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;The name of the customer&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasPostalAddress</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;The Postal address of the customer&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasStars</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;The critics rating on the article&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#has_a</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;Article attributes are defined by has-a relationship&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#height</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;The Image posted online has a particular height and width&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isCreatedBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;The author(creator) who writes the News-article&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isCreatedBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isCreatedBy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isCreatedon</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;The date on which article was created&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isDistributedBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;The Distributor who distributes the newspaper(consisting of Articles) to customer postal address&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isModifiedBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;It specify the person who edits or modify the news-article i.e. Editor&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isModifiedOn</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;The date on which article was modified&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isPublishedOn</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;The date on which article published in newspaper&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isPublishedby</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;A person who finally review the article before sending it to print media&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isPublishedby</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isPublishedBy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isRatedby</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;Official rating of the newspaper article&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isRelatedtoArticle</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;The content posted on social media has associated Article printed in newsaper&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isRelatedtoMedia</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;The article printed in newspaper has associated content posted on Internet (Social_Media Posting)&quot;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#mentions</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;Article mentions about the concept ie. description about article&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#pageEnd</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;The page on which the article ends&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#pageEnd</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">pageEnd</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#creator"/>
+        <IRI>#pageStart</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">pagestart</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#pageStart</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;The page on which article starts&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#print</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;The printing press organization publishes or prints the articles&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#width</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;The audio ,video and image posted online has a width or duration for which it runs&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#wordcount</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;The total number of words that can be used in an article&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#worksFor</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;Author works for Editor and Editor works for publisher .Hence, author works for publisher ,inferred by transitive property&quot;</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+
